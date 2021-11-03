@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='../static/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' />
+
+
+</head>
+
+<body>
+
+
+  <div class="wrapper bg-white">
+    <div class="h2 text-center">Creativity</div>
+    <div class="h4 text-muted text-center pt-2">Enter your login details</div>
+    <form class="pt-3" action="/v1/home" method="post">
+      <div class="form-group py-2">
+        <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text" placeholder="Email Address"
+            required class="" name="email"> </div>
+      </div>
+      <div class="form-group py-1 pb-2">
+        <div class="input-field"> <span class="fas fa-lock p-2"></span> <input type="password"
+            placeholder="Enter your Password" required class="" name="password"> </div>
+      </div>
+      <div class="d-flex align-items-start">
+        <div class="remember"> <label class="option text-muted"> Remember me <input type="radio" name="radio"> <span
+              class="checkmark"></span> </label> </div>
+        <div class="ml-auto"> <a href="#" id="forgot">Forgot Password?</a> </div>
+      </div> <button class="btn btn-block text-center my-3" type="submit">Sign In</button>
+      <div class="text-center pt-3 text-muted">Not a member? <a href="/v1/signup">Sign Up</a></div>
+    </form>
+  </div>
+
+
+
+  <% if (!status) { %>
+    <div class="alert alert-danger danger-box" role="alert">
+      <%= message %>
+    </div>
+    <% } %>
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
